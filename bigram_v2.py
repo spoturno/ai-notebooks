@@ -115,7 +115,7 @@ class BigramLanguageModel(nn.Module):
         x = tok_emb + pos_emb
         
         # Here will be the attention block
-        x = self.sa_head(x)
+        x = self.sa_heads(x)
 
         # logits = x @ weight.T + bias
         logits = self.lm_head(x)
